@@ -23,3 +23,5 @@
 psy
 *.swp
 DatasetP2/cor
+*.svg
+input*.txt

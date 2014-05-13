@@ -15,7 +15,7 @@ for i in $(eval echo {$range})
 do
         cp DatasetP2/input/input$i.txt input.txt
         echo -n "$i: "
-        (time ./generali) &> /tmp/res && cat /tmp/res | grep real 
+        (time ./psy) &> /tmp/res && cat /tmp/res | grep real 
         echo -n "   "
         ./DatasetP2/cor DatasetP2/input/input$i.txt DatasetP2/helper/helper$i.txt output.txt
         echo ""

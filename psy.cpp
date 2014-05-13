@@ -10,7 +10,14 @@ struct node_t {
 typedef vector<node_t> graph_t;
 
 vector<int> solve(const graph_t &graph){
-
+    vector<int> res;
+    for(int i = 0; i < graph.size(); i++){
+        if(graph[i].neighbors.size() == 1){
+            res.push_back(i);
+            break;
+        }
+    }
+    return res;
 }
 
 int main(int argc, char ** argv){
