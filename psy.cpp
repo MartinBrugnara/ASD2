@@ -14,9 +14,9 @@ vector<int> solve(const graph_t &graph){
     for(int i = 0; i < graph.size(); i++){
         if(graph[i].neighbors.size() == 1){
             res.push_back(i);
-            break;
         }
     }
+    res.pop_back();
     return res;
 }
 

@@ -17,7 +17,8 @@ def main(inp, out, is_output):
     arrows = [' -> '.join(a.split(' ')) for a in content]
 
     with open(".graph", 'w') as f:
-        f.write("digraph G {\n")
+        f.write("digraph {\n")
+        f.write("edge [dir=none]\n")
         if is_output:
             for r in roots.strip().split(' '):
                 f.write('\t{};\n'.format(r))
